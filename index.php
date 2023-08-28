@@ -61,8 +61,28 @@ foreach ($productData as ["id" => $id, "icon" =>$icon,"name" => $name, "descript
 
 
 
+
 echo PHP_EOL;
 ?>
+
+<?php 
+// Datos de conexión a la base de datos
+$servername = "MYSQL5049.site4now.net";
+$dbname = "db_9d664d_devweb";
+$username = "9d664d_devweb";
+$password = "d354rr0LloW3bUm6";
+
+// Crear la conexión
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Verificar la conexión
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+
+$conn->close();
+?>
+
             </article>
         </section>
     
